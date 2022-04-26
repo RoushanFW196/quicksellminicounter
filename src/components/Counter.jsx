@@ -1,8 +1,22 @@
 
 import React, {useState} from 'react';
 import "./counter.css";
+import CounterInput from './CounterInput';
+
+
+const initial={
+    value:1,
+    maxValue:1000,
+};
+
+
 const Counter = () => {
-  const [count,setCount]=useState(1)
+  const [count,setCount]=useState(1);
+
+  const[input,setInput]=useState(false)
+
+  
+
 
 
 
@@ -10,15 +24,23 @@ const Counter = () => {
   return (
     <div className="container">
        <div className="counter-wrapper">
-         <div className="rectanglecopy">
-             <button className="logo" onClick={()=>setCount(count-1)}>-</button>
+
+          <div className="rectanglecopy">
+             <button className="logo1 " onClick={()=>setCount(count-1)}>-</button>
          </div>
-         <div>
-             <p className="text">{count}</p>
+
+         <div className="rectanglecopy3">
+             <button  className="logo3">{count}</button>  
          </div>
-         <div>
-             <button className="logo2 rectanglecopy2" onClick={()=>setCount(count+1)}>+</button>
-         </div>
+          
+      
+
+         <div className="rectanglecopy2">
+             <button className="logo2" onClick={()=>setCount(count+1)}>+</button>
+         </div> 
+
+        
+
        </div>
     </div>
   )
