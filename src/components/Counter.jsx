@@ -1,19 +1,13 @@
 
 import React, {useState} from 'react';
 import "./counter.css";
-import CounterInput from './CounterInput';
 
-
-const initial={
-    value:1,
-    maxValue:1000,
-};
 
 
 const Counter = () => {
   const [count,setCount]=useState(1);
 
-  const[input,setInput]=useState(false)
+  
 
   
 
